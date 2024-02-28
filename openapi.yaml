@@ -1,0 +1,3460 @@
+---
+openapi: 3.1.0
+info:
+  title: NGINX Declarative API
+  contact:
+    name: GitHub
+    url: https://github.com/f5devcentral/NGINX-Declarative-API
+  version: '4.2'
+paths:
+  "/v4.0/config":
+    post:
+      summary: Post Config V4 0
+      operationId: post_config_v4_0_v4_0_config_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__ConfigDeclaration"
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.1/config":
+    post:
+      summary: Post Config V4 1
+      operationId: post_config_v4_1_v4_1_config_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__ConfigDeclaration"
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.2/config":
+    post:
+      summary: Post Config V4 2
+      operationId: post_config_v4_2_v4_2_config_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__ConfigDeclaration"
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.0/config/{configuid}":
+    patch:
+      summary: Patch Config V4 0
+      operationId: patch_config_v4_0_v4_0_config__configuid__patch
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__ConfigDeclaration"
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+    get:
+      summary: Get Config Declaration V4 0
+      operationId: get_config_declaration_v4_0_v4_0_config__configuid__get
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+    delete:
+      summary: Delete Config
+      operationId: delete_config_v4_0_config__configuid__delete
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.1/config/{configuid}":
+    patch:
+      summary: Patch Config V4 1
+      operationId: patch_config_v4_1_v4_1_config__configuid__patch
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__ConfigDeclaration"
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+    get:
+      summary: Get Config Declaration V4 1
+      operationId: get_config_declaration_v4_1_v4_1_config__configuid__get
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+    delete:
+      summary: Delete Config
+      operationId: delete_config_v4_1_config__configuid__delete
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.2/config/{configuid}":
+    patch:
+      summary: Patch Config V4 2
+      operationId: patch_config_v4_2_v4_2_config__configuid__patch
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__ConfigDeclaration"
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+    get:
+      summary: Get Config Declaration V4 2
+      operationId: get_config_declaration_v4_2_v4_2_config__configuid__get
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+    delete:
+      summary: Delete Config
+      operationId: delete_config_v4_2_config__configuid__delete
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.2/config/{configuid}/status":
+    get:
+      summary: Get Config Status
+      operationId: get_config_status_v4_2_config__configuid__status_get
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.1/config/{configuid}/status":
+    get:
+      summary: Get Config Status
+      operationId: get_config_status_v4_1_config__configuid__status_get
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/v4.0/config/{configuid}/status":
+    get:
+      summary: Get Config Status
+      operationId: get_config_status_v4_0_config__configuid__status_get
+      parameters:
+      - name: configuid
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuid
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            text/plain:
+              schema:
+                type: string
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+components:
+  schemas:
+    APIGatewayAuthentication:
+      properties:
+        client:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LocationAuthClient"
+            type: array
+          - type: 'null'
+          title: Client
+          default: []
+        enforceOnPaths:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enforceonpaths
+          default: true
+        paths:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Paths
+          default: []
+      additionalProperties: false
+      type: object
+      title: APIGatewayAuthentication
+    API_Gateway:
+      properties:
+        enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enabled
+          default: false
+        strip_uri:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Strip Uri
+          default: false
+        server_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Server Url
+          default: ''
+      additionalProperties: false
+      type: object
+      title: API_Gateway
+    AppProtect:
+      properties:
+        enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enabled
+          default: false
+        policy:
+          type: string
+          title: Policy
+          default: ''
+        log:
+          allOf:
+          - "$ref": "#/components/schemas/AppProtectLog"
+          default: {}
+      additionalProperties: false
+      type: object
+      title: AppProtect
+    AppProtectLog:
+      properties:
+        enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enabled
+          default: false
+        profile_name:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Profile Name
+          default: ''
+        destination:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Destination
+          default: ''
+      additionalProperties: false
+      type: object
+      title: AppProtectLog
+    AppProtectLogProfile:
+      properties:
+        name:
+          type: string
+          title: Name
+        format:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Format
+          default: default
+        format_string:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Format String
+          default: ''
+        type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Type
+          default: blocked
+        max_request_size:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Max Request Size
+          default: any
+        max_message_size:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Max Message Size
+          default: 5k
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: AppProtectLogProfile
+    AuthClientMtls:
+      properties:
+        enabled:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Enabled
+          default: 'off'
+        client_certificates:
+          type: string
+          title: Client Certificates
+          default: ''
+      additionalProperties: false
+      type: object
+      title: AuthClientMtls
+    AuthServerJWT:
+      properties:
+        token:
+          type: string
+          title: Token
+          default: ''
+      additionalProperties: false
+      type: object
+      title: AuthServerJWT
+    CachingItem:
+      properties:
+        name:
+          type: string
+          title: Name
+        key:
+          type: string
+          title: Key
+        size:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Size
+          default: 10m
+        valid:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/ValidItem"
+            type: array
+          - type: 'null'
+          title: Valid
+          default: []
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - key
+      title: CachingItem
+    DeveloperPortal:
+      properties:
+        enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enabled
+          default: false
+        uri:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Uri
+          default: "/devportal.html"
+      additionalProperties: false
+      type: object
+      title: DeveloperPortal
+    HTTPHeader:
+      properties:
+        name:
+          type: string
+          title: Name
+          default: ''
+        value:
+          type: string
+          title: Value
+          default: ''
+      additionalProperties: false
+      type: object
+      title: HTTPHeader
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            "$ref": "#/components/schemas/ValidationError"
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    HealthCheck:
+      properties:
+        enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enabled
+          default: false
+        uri:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Uri
+          default: "/"
+        interval:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Interval
+          default: 5
+        fails:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Fails
+          default: 1
+        passes:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Passes
+          default: 1
+      additionalProperties: false
+      type: object
+      title: HealthCheck
+    L4Origin:
+      properties:
+        server:
+          type: string
+          title: Server
+        weight:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Weight
+          default: 1
+        max_fails:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Max Fails
+          default: 1
+        fail_timeout:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Fail Timeout
+          default: ''
+        max_conns:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Max Conns
+          default: 0
+        slow_start:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Slow Start
+          default: ''
+        backup:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Backup
+          default: false
+      additionalProperties: false
+      type: object
+      required:
+      - server
+      title: L4Origin
+    LocationAuth:
+      properties:
+        client:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LocationAuthClient"
+            type: array
+          - type: 'null'
+          title: Client
+          default: []
+        server:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LocationAuthServer"
+            type: array
+          - type: 'null'
+          title: Server
+          default: []
+      additionalProperties: false
+      type: object
+      title: LocationAuth
+    LocationAuthClient:
+      properties:
+        profile:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Profile
+          default: ''
+      additionalProperties: false
+      type: object
+      title: LocationAuthClient
+    LocationAuthServer:
+      properties:
+        profile:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Profile
+          default: ''
+      additionalProperties: false
+      type: object
+      title: LocationAuthServer
+    LocationHeaderToClient:
+      properties:
+        add:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/HTTPHeader"
+            type: array
+          - type: 'null'
+          title: Add
+          default: []
+        delete:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Delete
+          default: []
+        replace:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/HTTPHeader"
+            type: array
+          - type: 'null'
+          title: Replace
+          default: []
+      additionalProperties: false
+      type: object
+      title: LocationHeaderToClient
+    LocationHeaderToServer:
+      properties:
+        set:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/HTTPHeader"
+            type: array
+          - type: 'null'
+          title: Set
+          default: []
+        delete:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Delete
+          default: []
+      additionalProperties: false
+      type: object
+      title: LocationHeaderToServer
+    LocationHeaders:
+      properties:
+        to_server:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationHeaderToServer"
+          - type: 'null'
+          default: {}
+        to_client:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationHeaderToClient"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: LocationHeaders
+    Log:
+      properties:
+        access:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Access
+          default: ''
+        error:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error
+          default: ''
+      additionalProperties: false
+      type: object
+      title: Log
+    LogProfile:
+      properties:
+        type:
+          type: string
+          title: Type
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtectLogProfile"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      title: LogProfile
+    Map:
+      properties:
+        match:
+          type: string
+          title: Match
+        variable:
+          type: string
+          title: Variable
+        entries:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/MapEntry"
+            type: array
+          - type: 'null'
+          title: Entries
+          default: []
+      additionalProperties: false
+      type: object
+      required:
+      - match
+      - variable
+      title: Map
+    MapEntry:
+      properties:
+        key:
+          type: string
+          title: Key
+        keymatch:
+          type: string
+          title: Keymatch
+        value:
+          type: string
+          title: Value
+      additionalProperties: false
+      type: object
+      required:
+      - key
+      - keymatch
+      - value
+      title: MapEntry
+    Mtls:
+      properties:
+        enabled:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Enabled
+          default: 'off'
+        client_certificates:
+          type: string
+          title: Client Certificates
+          default: ''
+      additionalProperties: false
+      type: object
+      title: Mtls
+    NginxPlusApi:
+      properties:
+        write:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Write
+          default: false
+        listen:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Listen
+          default: ''
+        allow_acl:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Allow Acl
+          default: ''
+      additionalProperties: false
+      type: object
+      title: NginxPlusApi
+    NjsFile:
+      properties:
+        name:
+          type: string
+          title: Name
+        file:
+          "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - file
+      title: NjsFile
+    NjsHookHttpServer:
+      properties:
+        hook:
+          "$ref": "#/components/schemas/NjsHookHttpServerDetails"
+        profile:
+          type: string
+          title: Profile
+        function:
+          type: string
+          title: Function
+      additionalProperties: false
+      type: object
+      required:
+      - hook
+      - profile
+      - function
+      title: NjsHookHttpServer
+    NjsHookHttpServerDetails:
+      properties:
+        type:
+          type: string
+          title: Type
+        js_preload_object:
+          anyOf:
+          - "$ref": "#/components/schemas/NjsHook_js_preload_object"
+          - type: 'null'
+          default: {}
+        js_set:
+          anyOf:
+          - "$ref": "#/components/schemas/NjsHook_js_set"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      title: NjsHookHttpServerDetails
+    NjsHookLocation:
+      properties:
+        hook:
+          "$ref": "#/components/schemas/NjsHookLocationDetails"
+        profile:
+          type: string
+          title: Profile
+        function:
+          type: string
+          title: Function
+      additionalProperties: false
+      type: object
+      required:
+      - hook
+      - profile
+      - function
+      title: NjsHookLocation
+    NjsHookLocationDetails:
+      properties:
+        type:
+          type: string
+          title: Type
+        js_preload_object:
+          anyOf:
+          - "$ref": "#/components/schemas/NjsHook_js_preload_object"
+          - type: 'null'
+          default: {}
+        js_set:
+          anyOf:
+          - "$ref": "#/components/schemas/NjsHook_js_set"
+          - type: 'null'
+          default: {}
+        js_body_filter:
+          anyOf:
+          - "$ref": "#/components/schemas/NjsHook_js_body_filter"
+          - type: 'null'
+          default: {}
+        js_periodic:
+          anyOf:
+          - "$ref": "#/components/schemas/NjsHook_js_periodic"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      title: NjsHookLocationDetails
+    NjsHook_js_body_filter:
+      properties:
+        buffer_type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Buffer Type
+          default: ''
+      additionalProperties: false
+      type: object
+      title: NjsHook_js_body_filter
+    NjsHook_js_periodic:
+      properties:
+        interval:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Interval
+          default: ''
+        jitter:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Jitter
+          default: 0
+        worker_affinity:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Worker Affinity
+          default: ''
+      additionalProperties: false
+      type: object
+      title: NjsHook_js_periodic
+    NjsHook_js_preload_object:
+      properties:
+        file:
+          type: string
+          title: File
+      additionalProperties: false
+      type: object
+      required:
+      - file
+      title: NjsHook_js_preload_object
+    NjsHook_js_set:
+      properties:
+        variable:
+          type: string
+          title: Variable
+      additionalProperties: false
+      type: object
+      required:
+      - variable
+      title: NjsHook_js_set
+    ObjectFromSourceOfTruth:
+      properties:
+        content:
+          type: string
+          title: Content
+          default: ''
+        authentication:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LocationAuthServer"
+            type: array
+          - type: 'null'
+          title: Authentication
+          default: []
+      additionalProperties: false
+      type: object
+      title: ObjectFromSourceOfTruth
+    Ocsp:
+      properties:
+        enabled:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Enabled
+          default: 'off'
+        responder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Responder
+          default: ''
+      additionalProperties: false
+      type: object
+      title: Ocsp
+    OcspStapling:
+      properties:
+        enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enabled
+          default: false
+        verify:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Verify
+          default: false
+        responder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Responder
+          default: ''
+      additionalProperties: false
+      type: object
+      title: OcspStapling
+    Origin:
+      properties:
+        server:
+          type: string
+          title: Server
+        weight:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Weight
+          default: 1
+        max_fails:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Max Fails
+          default: 1
+        fail_timeout:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Fail Timeout
+          default: 10s
+        max_conns:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Max Conns
+          default: 0
+        slow_start:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Slow Start
+          default: '0'
+        backup:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Backup
+          default: false
+      additionalProperties: false
+      type: object
+      required:
+      - server
+      title: Origin
+    OutputConfigMap:
+      properties:
+        name:
+          type: string
+          title: Name
+          default: nginx-config
+        namespace:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Namespace
+          default: ''
+        filename:
+          type: string
+          title: Filename
+          default: nginx-config.conf
+      additionalProperties: false
+      type: object
+      title: OutputConfigMap
+    OutputHttp:
+      properties:
+        url:
+          type: string
+          title: Url
+          default: ''
+      additionalProperties: false
+      type: object
+      title: OutputHttp
+    RateLimit:
+      properties:
+        profile:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Profile
+          default: ''
+        httpcode:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Httpcode
+          default: 429
+        burst:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Burst
+          default: 0
+        delay:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Delay
+          default: 0
+      additionalProperties: false
+      type: object
+      title: RateLimit
+    RateLimitApiGw:
+      properties:
+        profile:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Profile
+          default: ''
+        httpcode:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Httpcode
+          default: 429
+        burst:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Burst
+          default: 0
+        delay:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Delay
+          default: 0
+        enforceOnPaths:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Enforceonpaths
+          default: true
+        paths:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Paths
+          default: []
+      additionalProperties: false
+      type: object
+      title: RateLimitApiGw
+    RateLimitItem:
+      properties:
+        name:
+          type: string
+          title: Name
+        key:
+          type: string
+          title: Key
+        size:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Size
+          default: ''
+        rate:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Rate
+          default: ''
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - key
+      title: RateLimitItem
+    Sticky:
+      properties:
+        cookie:
+          type: string
+          title: Cookie
+          default: ''
+        expires:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Expires
+          default: ''
+        domain:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Domain
+          default: ''
+        path:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Path
+          default: ''
+      additionalProperties: false
+      type: object
+      title: Sticky
+    V4_0_NginxConfigDeclaration__APIGateway:
+      properties:
+        openapi_schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Openapi Schema
+          default: ''
+        api_gateway:
+          anyOf:
+          - "$ref": "#/components/schemas/API_Gateway"
+          - type: 'null'
+          default: {}
+        developer_portal:
+          anyOf:
+          - "$ref": "#/components/schemas/DeveloperPortal"
+          - type: 'null'
+          default: {}
+        rate_limit:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/RateLimitApiGw"
+            type: array
+          - type: 'null'
+          title: Rate Limit
+          default: []
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/APIGatewayAuthentication"
+          - type: 'null'
+          default: {}
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: APIGateway
+    V4_0_NginxConfigDeclaration__AuthClientJWT:
+      properties:
+        realm:
+          type: string
+          title: Realm
+          default: JWT Authentication
+        key:
+          type: string
+          title: Key
+          default: ''
+        cachetime:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Cachetime
+          default: 0
+        jwt_type:
+          type: string
+          title: Jwt Type
+          default: signed
+      additionalProperties: false
+      type: object
+      title: AuthClientJWT
+    V4_0_NginxConfigDeclaration__Authentication:
+      properties:
+        client:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Authentication_Client"
+            type: array
+          - type: 'null'
+          title: Client
+          default: []
+        server:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Authentication_Server"
+            type: array
+          - type: 'null'
+          title: Server
+          default: []
+      additionalProperties: false
+      type: object
+      title: Authentication
+    V4_0_NginxConfigDeclaration__Authentication_Client:
+      properties:
+        name:
+          type: string
+          title: Name
+        type:
+          type: string
+          title: Type
+        jwt:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__AuthClientJWT"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - type
+      title: Authentication_Client
+    V4_0_NginxConfigDeclaration__Authentication_Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        type:
+          type: string
+          title: Type
+        jwt:
+          anyOf:
+          - "$ref": "#/components/schemas/AuthServerJWT"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - type
+      title: Authentication_Server
+    V4_0_NginxConfigDeclaration__ConfigDeclaration:
+      properties:
+        output:
+          "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Output"
+        declaration:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Declaration"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - output
+      title: ConfigDeclaration
+    V4_0_NginxConfigDeclaration__Declaration:
+      properties:
+        layer4:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Layer4"
+          - type: 'null'
+          default: {}
+        http:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Http"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Declaration
+    V4_0_NginxConfigDeclaration__Http:
+      properties:
+        servers:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Server"
+            type: array
+          - type: 'null'
+          title: Servers
+          default: []
+        upstreams:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Upstream"
+            type: array
+          - type: 'null'
+          title: Upstreams
+          default: []
+        caching:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/CachingItem"
+            type: array
+          - type: 'null'
+          title: Caching
+          default: []
+        rate_limit:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/RateLimitItem"
+            type: array
+          - type: 'null'
+          title: Rate Limit
+          default: []
+        nginx_plus_api:
+          anyOf:
+          - "$ref": "#/components/schemas/NginxPlusApi"
+          - type: 'null'
+          default: {}
+        maps:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/Map"
+            type: array
+          - type: 'null'
+          title: Maps
+          default: []
+        snippet:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snippet
+          default: ''
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Authentication"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Http
+    V4_0_NginxConfigDeclaration__L4Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        listen:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__ListenL4"
+          - type: 'null'
+          default: {}
+        upstream:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Upstream
+          default: ''
+        snippet:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snippet
+          default: ''
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: L4Server
+    V4_0_NginxConfigDeclaration__L4Upstream:
+      properties:
+        name:
+          type: string
+          title: Name
+        origin:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/L4Origin"
+            type: array
+          - type: 'null'
+          title: Origin
+          default: []
+        snippet:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snippet
+          default: ''
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: L4Upstream
+    V4_0_NginxConfigDeclaration__Layer4:
+      properties:
+        servers:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__L4Server"
+            type: array
+          - type: 'null'
+          title: Servers
+          default: []
+        upstreams:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__L4Upstream"
+            type: array
+          - type: 'null'
+          title: Upstreams
+          default: []
+      additionalProperties: false
+      type: object
+      title: Layer4
+    V4_0_NginxConfigDeclaration__Listen:
+      properties:
+        address:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Address
+          default: ''
+        http2:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Http2
+          default: false
+        tls:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Tls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Listen
+    V4_0_NginxConfigDeclaration__ListenL4:
+      properties:
+        address:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Address
+          default: ''
+        protocol:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Protocol
+          default: tcp
+        tls:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Tls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: ListenL4
+    V4_0_NginxConfigDeclaration__Location:
+      properties:
+        uri:
+          type: string
+          title: Uri
+        urimatch:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Urimatch
+          default: prefix
+        upstream:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Upstream
+          default: ''
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+        apigateway:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__APIGateway"
+          - type: 'null'
+          default: {}
+        caching:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Caching
+          default: ''
+        rate_limit:
+          anyOf:
+          - "$ref": "#/components/schemas/RateLimit"
+          - type: 'null'
+          default: {}
+        health_check:
+          anyOf:
+          - "$ref": "#/components/schemas/HealthCheck"
+          - type: 'null'
+          default: {}
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtect"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snippet
+          default: ''
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationAuth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - uri
+      title: Location
+    V4_0_NginxConfigDeclaration__NmsCertificate:
+      properties:
+        type:
+          type: string
+          title: Type
+        name:
+          type: string
+          title: Name
+        contents:
+          type: string
+          title: Contents
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      - name
+      - contents
+      title: NmsCertificate
+    V4_0_NginxConfigDeclaration__NmsPolicy:
+      properties:
+        type:
+          type: string
+          title: Type
+          default: ''
+        name:
+          type: string
+          title: Name
+          default: ''
+        active_tag:
+          type: string
+          title: Active Tag
+          default: ''
+        versions:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__NmsPolicyVersion"
+            type: array
+          - type: 'null'
+          title: Versions
+          default: []
+      additionalProperties: false
+      type: object
+      title: NmsPolicy
+    V4_0_NginxConfigDeclaration__NmsPolicyVersion:
+      properties:
+        tag:
+          type: string
+          title: Tag
+          default: ''
+        displayName:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Displayname
+          default: ''
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+          default: ''
+        contents:
+          type: string
+          title: Contents
+          default: ''
+      additionalProperties: false
+      type: object
+      title: NmsPolicyVersion
+    V4_0_NginxConfigDeclaration__Output:
+      properties:
+        type:
+          type: string
+          title: Type
+        configmap:
+          anyOf:
+          - "$ref": "#/components/schemas/OutputConfigMap"
+          - type: 'null'
+          default: {}
+        http:
+          anyOf:
+          - "$ref": "#/components/schemas/OutputHttp"
+          - type: 'null'
+          default: {}
+        nms:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__OutputNMS"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      title: Output
+    V4_0_NginxConfigDeclaration__OutputNMS:
+      properties:
+        url:
+          type: string
+          title: Url
+          default: ''
+        username:
+          type: string
+          title: Username
+          default: ''
+        password:
+          type: string
+          title: Password
+          default: ''
+        instancegroup:
+          type: string
+          title: Instancegroup
+          default: ''
+        synctime:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Synctime
+          default: 0
+        modules:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Modules
+          default: []
+        certificates:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__NmsCertificate"
+            type: array
+          - type: 'null'
+          title: Certificates
+          default: []
+        policies:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__NmsPolicy"
+            type: array
+          - type: 'null'
+          title: Policies
+          default: []
+        log_profiles:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LogProfile"
+            type: array
+          - type: 'null'
+          title: Log Profiles
+          default: []
+      additionalProperties: false
+      type: object
+      title: OutputNMS
+    V4_0_NginxConfigDeclaration__Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        names:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Names
+          default: []
+        resolver:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Resolver
+          default: ''
+        listen:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Listen"
+          - type: 'null'
+          default: {}
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+        locations:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_0_NginxConfigDeclaration__Location"
+            type: array
+          - type: 'null'
+          title: Locations
+          default: []
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtect"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snippet
+          default: ''
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: Server
+    V4_0_NginxConfigDeclaration__Tls:
+      properties:
+        certificate:
+          type: string
+          title: Certificate
+          default: ''
+        key:
+          type: string
+          title: Key
+          default: ''
+        trusted_ca_certificates:
+          type: string
+          title: Trusted Ca Certificates
+          default: ''
+        ciphers:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Ciphers
+          default: ''
+        protocols:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Protocols
+          default: []
+        mtls:
+          anyOf:
+          - "$ref": "#/components/schemas/Mtls"
+          - type: 'null'
+          default: {}
+        ocsp:
+          anyOf:
+          - "$ref": "#/components/schemas/Ocsp"
+          - type: 'null'
+          default: {}
+        stapling:
+          anyOf:
+          - "$ref": "#/components/schemas/OcspStapling"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Tls
+    V4_0_NginxConfigDeclaration__Upstream:
+      properties:
+        name:
+          type: string
+          title: Name
+        origin:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/Origin"
+            type: array
+          - type: 'null'
+          title: Origin
+          default: []
+        sticky:
+          anyOf:
+          - "$ref": "#/components/schemas/Sticky"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snippet
+          default: ''
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: Upstream
+    V4_1_NginxConfigDeclaration__APIGateway:
+      properties:
+        openapi_schema:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        api_gateway:
+          anyOf:
+          - "$ref": "#/components/schemas/API_Gateway"
+          - type: 'null'
+          default: {}
+        developer_portal:
+          anyOf:
+          - "$ref": "#/components/schemas/DeveloperPortal"
+          - type: 'null'
+          default: {}
+        rate_limit:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/RateLimitApiGw"
+            type: array
+          - type: 'null'
+          title: Rate Limit
+          default: []
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/APIGatewayAuthentication"
+          - type: 'null'
+          default: {}
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: APIGateway
+    V4_1_NginxConfigDeclaration__AuthClientJWT:
+      properties:
+        realm:
+          type: string
+          title: Realm
+          default: JWT Authentication
+        key:
+          type: string
+          title: Key
+          default: ''
+        cachetime:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Cachetime
+          default: 0
+        jwt_type:
+          type: string
+          title: Jwt Type
+          default: signed
+      additionalProperties: false
+      type: object
+      title: AuthClientJWT
+    V4_1_NginxConfigDeclaration__AuthServerToken:
+      properties:
+        token:
+          type: string
+          title: Token
+          default: ''
+        type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Type
+          default: bearer
+        location:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Location
+          default: ''
+      additionalProperties: false
+      type: object
+      title: AuthServerToken
+    V4_1_NginxConfigDeclaration__Authentication:
+      properties:
+        client:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Authentication_Client"
+            type: array
+          - type: 'null'
+          title: Client
+          default: []
+        server:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Authentication_Server"
+            type: array
+          - type: 'null'
+          title: Server
+          default: []
+      additionalProperties: false
+      type: object
+      title: Authentication
+    V4_1_NginxConfigDeclaration__Authentication_Client:
+      properties:
+        name:
+          type: string
+          title: Name
+        type:
+          type: string
+          title: Type
+        jwt:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__AuthClientJWT"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - type
+      title: Authentication_Client
+    V4_1_NginxConfigDeclaration__Authentication_Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        type:
+          type: string
+          title: Type
+        token:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__AuthServerToken"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - type
+      title: Authentication_Server
+    V4_1_NginxConfigDeclaration__ConfigDeclaration:
+      properties:
+        output:
+          "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Output"
+        declaration:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Declaration"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - output
+      title: ConfigDeclaration
+    V4_1_NginxConfigDeclaration__Declaration:
+      properties:
+        layer4:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Layer4"
+          - type: 'null'
+          default: {}
+        http:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Http"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Declaration
+    V4_1_NginxConfigDeclaration__Http:
+      properties:
+        servers:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Server"
+            type: array
+          - type: 'null'
+          title: Servers
+          default: []
+        upstreams:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Upstream"
+            type: array
+          - type: 'null'
+          title: Upstreams
+          default: []
+        caching:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/CachingItem"
+            type: array
+          - type: 'null'
+          title: Caching
+          default: []
+        rate_limit:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/RateLimitItem"
+            type: array
+          - type: 'null'
+          title: Rate Limit
+          default: []
+        nginx_plus_api:
+          anyOf:
+          - "$ref": "#/components/schemas/NginxPlusApi"
+          - type: 'null'
+          default: {}
+        maps:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/Map"
+            type: array
+          - type: 'null'
+          title: Maps
+          default: []
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Authentication"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Http
+    V4_1_NginxConfigDeclaration__L4Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        listen:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__ListenL4"
+          - type: 'null'
+          default: {}
+        upstream:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Upstream
+          default: ''
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: L4Server
+    V4_1_NginxConfigDeclaration__L4Upstream:
+      properties:
+        name:
+          type: string
+          title: Name
+        origin:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/L4Origin"
+            type: array
+          - type: 'null'
+          title: Origin
+          default: []
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: L4Upstream
+    V4_1_NginxConfigDeclaration__Layer4:
+      properties:
+        servers:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__L4Server"
+            type: array
+          - type: 'null'
+          title: Servers
+          default: []
+        upstreams:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__L4Upstream"
+            type: array
+          - type: 'null'
+          title: Upstreams
+          default: []
+      additionalProperties: false
+      type: object
+      title: Layer4
+    V4_1_NginxConfigDeclaration__Listen:
+      properties:
+        address:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Address
+          default: ''
+        http2:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Http2
+          default: false
+        tls:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Tls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Listen
+    V4_1_NginxConfigDeclaration__ListenL4:
+      properties:
+        address:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Address
+          default: ''
+        protocol:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Protocol
+          default: tcp
+        tls:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Tls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: ListenL4
+    V4_1_NginxConfigDeclaration__Location:
+      properties:
+        uri:
+          type: string
+          title: Uri
+        urimatch:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Urimatch
+          default: prefix
+        upstream:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Upstream
+          default: ''
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+        apigateway:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__APIGateway"
+          - type: 'null'
+          default: {}
+        caching:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Caching
+          default: ''
+        rate_limit:
+          anyOf:
+          - "$ref": "#/components/schemas/RateLimit"
+          - type: 'null'
+          default: {}
+        health_check:
+          anyOf:
+          - "$ref": "#/components/schemas/HealthCheck"
+          - type: 'null'
+          default: {}
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtect"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationAuth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - uri
+      title: Location
+    V4_1_NginxConfigDeclaration__NmsCertificate:
+      properties:
+        type:
+          type: string
+          title: Type
+        name:
+          type: string
+          title: Name
+        contents:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      - name
+      title: NmsCertificate
+    V4_1_NginxConfigDeclaration__NmsPolicy:
+      properties:
+        type:
+          type: string
+          title: Type
+          default: ''
+        name:
+          type: string
+          title: Name
+          default: ''
+        active_tag:
+          type: string
+          title: Active Tag
+          default: ''
+        versions:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__NmsPolicyVersion"
+            type: array
+          - type: 'null'
+          title: Versions
+          default: []
+      additionalProperties: false
+      type: object
+      title: NmsPolicy
+    V4_1_NginxConfigDeclaration__NmsPolicyVersion:
+      properties:
+        tag:
+          type: string
+          title: Tag
+          default: ''
+        displayName:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Displayname
+          default: ''
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+          default: ''
+        contents:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: NmsPolicyVersion
+    V4_1_NginxConfigDeclaration__Output:
+      properties:
+        type:
+          type: string
+          title: Type
+        configmap:
+          anyOf:
+          - "$ref": "#/components/schemas/OutputConfigMap"
+          - type: 'null'
+          default: {}
+        http:
+          anyOf:
+          - "$ref": "#/components/schemas/OutputHttp"
+          - type: 'null'
+          default: {}
+        nms:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__OutputNMS"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      title: Output
+    V4_1_NginxConfigDeclaration__OutputNMS:
+      properties:
+        url:
+          type: string
+          title: Url
+          default: ''
+        username:
+          type: string
+          title: Username
+          default: ''
+        password:
+          type: string
+          title: Password
+          default: ''
+        instancegroup:
+          type: string
+          title: Instancegroup
+          default: ''
+        synctime:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Synctime
+          default: 0
+        modules:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Modules
+          default: []
+        certificates:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__NmsCertificate"
+            type: array
+          - type: 'null'
+          title: Certificates
+          default: []
+        policies:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__NmsPolicy"
+            type: array
+          - type: 'null'
+          title: Policies
+          default: []
+        log_profiles:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LogProfile"
+            type: array
+          - type: 'null'
+          title: Log Profiles
+          default: []
+      additionalProperties: false
+      type: object
+      title: OutputNMS
+    V4_1_NginxConfigDeclaration__Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        names:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Names
+          default: []
+        resolver:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Resolver
+          default: ''
+        listen:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Listen"
+          - type: 'null'
+          default: {}
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+        locations:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_1_NginxConfigDeclaration__Location"
+            type: array
+          - type: 'null'
+          title: Locations
+          default: []
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtect"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: Server
+    V4_1_NginxConfigDeclaration__Tls:
+      properties:
+        certificate:
+          type: string
+          title: Certificate
+          default: ''
+        key:
+          type: string
+          title: Key
+          default: ''
+        trusted_ca_certificates:
+          type: string
+          title: Trusted Ca Certificates
+          default: ''
+        ciphers:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Ciphers
+          default: ''
+        protocols:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Protocols
+          default: []
+        mtls:
+          anyOf:
+          - "$ref": "#/components/schemas/Mtls"
+          - type: 'null'
+          default: {}
+        ocsp:
+          anyOf:
+          - "$ref": "#/components/schemas/Ocsp"
+          - type: 'null'
+          default: {}
+        stapling:
+          anyOf:
+          - "$ref": "#/components/schemas/OcspStapling"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Tls
+    V4_1_NginxConfigDeclaration__Upstream:
+      properties:
+        name:
+          type: string
+          title: Name
+        origin:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/Origin"
+            type: array
+          - type: 'null'
+          title: Origin
+          default: []
+        sticky:
+          anyOf:
+          - "$ref": "#/components/schemas/Sticky"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: Upstream
+    V4_2_NginxConfigDeclaration__APIGateway:
+      properties:
+        openapi_schema:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        api_gateway:
+          anyOf:
+          - "$ref": "#/components/schemas/API_Gateway"
+          - type: 'null'
+          default: {}
+        developer_portal:
+          anyOf:
+          - "$ref": "#/components/schemas/DeveloperPortal"
+          - type: 'null'
+          default: {}
+        rate_limit:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/RateLimitApiGw"
+            type: array
+          - type: 'null'
+          title: Rate Limit
+          default: []
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/APIGatewayAuthentication"
+          - type: 'null'
+          default: {}
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: APIGateway
+    V4_2_NginxConfigDeclaration__AuthClientJWT:
+      properties:
+        realm:
+          type: string
+          title: Realm
+          default: JWT Authentication
+        key:
+          type: string
+          title: Key
+          default: ''
+        cachetime:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Cachetime
+          default: 0
+        jwt_type:
+          type: string
+          title: Jwt Type
+          default: signed
+        token_location:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Token Location
+          default: ''
+      additionalProperties: false
+      type: object
+      title: AuthClientJWT
+    V4_2_NginxConfigDeclaration__AuthServerToken:
+      properties:
+        token:
+          type: string
+          title: Token
+          default: ''
+        type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Type
+          default: ''
+        location:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Location
+          default: ''
+        username:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Username
+          default: ''
+        password:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Password
+          default: ''
+      additionalProperties: false
+      type: object
+      title: AuthServerToken
+    V4_2_NginxConfigDeclaration__Authentication:
+      properties:
+        client:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Authentication_Client"
+            type: array
+          - type: 'null'
+          title: Client
+          default: []
+        server:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Authentication_Server"
+            type: array
+          - type: 'null'
+          title: Server
+          default: []
+      additionalProperties: false
+      type: object
+      title: Authentication
+    V4_2_NginxConfigDeclaration__Authentication_Client:
+      properties:
+        name:
+          type: string
+          title: Name
+        type:
+          type: string
+          title: Type
+        jwt:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__AuthClientJWT"
+          - type: 'null'
+          default: {}
+        mtls:
+          anyOf:
+          - "$ref": "#/components/schemas/AuthClientMtls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - type
+      title: Authentication_Client
+    V4_2_NginxConfigDeclaration__Authentication_Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        type:
+          type: string
+          title: Type
+        token:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__AuthServerToken"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - type
+      title: Authentication_Server
+    V4_2_NginxConfigDeclaration__ConfigDeclaration:
+      properties:
+        output:
+          "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Output"
+        declaration:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Declaration"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - output
+      title: ConfigDeclaration
+    V4_2_NginxConfigDeclaration__Declaration:
+      properties:
+        layer4:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Layer4"
+          - type: 'null'
+          default: {}
+        http:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Http"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Declaration
+    V4_2_NginxConfigDeclaration__Http:
+      properties:
+        servers:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Server"
+            type: array
+          - type: 'null'
+          title: Servers
+          default: []
+        upstreams:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Upstream"
+            type: array
+          - type: 'null'
+          title: Upstreams
+          default: []
+        caching:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/CachingItem"
+            type: array
+          - type: 'null'
+          title: Caching
+          default: []
+        rate_limit:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/RateLimitItem"
+            type: array
+          - type: 'null'
+          title: Rate Limit
+          default: []
+        nginx_plus_api:
+          anyOf:
+          - "$ref": "#/components/schemas/NginxPlusApi"
+          - type: 'null'
+          default: {}
+        maps:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/Map"
+            type: array
+          - type: 'null'
+          title: Maps
+          default: []
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Authentication"
+          - type: 'null'
+          default: {}
+        njs:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/NjsHookHttpServer"
+            type: array
+          - type: 'null'
+          title: Njs
+          default: []
+        njs_profiles:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/NjsFile"
+            type: array
+          - type: 'null'
+          title: Njs Profiles
+          default: []
+      additionalProperties: false
+      type: object
+      title: Http
+    V4_2_NginxConfigDeclaration__L4Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        listen:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__ListenL4"
+          - type: 'null'
+          default: {}
+        upstream:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Upstream
+          default: ''
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: L4Server
+    V4_2_NginxConfigDeclaration__L4Upstream:
+      properties:
+        name:
+          type: string
+          title: Name
+        origin:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/L4Origin"
+            type: array
+          - type: 'null'
+          title: Origin
+          default: []
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: L4Upstream
+    V4_2_NginxConfigDeclaration__Layer4:
+      properties:
+        servers:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__L4Server"
+            type: array
+          - type: 'null'
+          title: Servers
+          default: []
+        upstreams:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__L4Upstream"
+            type: array
+          - type: 'null'
+          title: Upstreams
+          default: []
+      additionalProperties: false
+      type: object
+      title: Layer4
+    V4_2_NginxConfigDeclaration__Listen:
+      properties:
+        address:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Address
+          default: ''
+        http2:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Http2
+          default: false
+        tls:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Tls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Listen
+    V4_2_NginxConfigDeclaration__ListenL4:
+      properties:
+        address:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Address
+          default: ''
+        protocol:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Protocol
+          default: tcp
+        tls:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Tls"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: ListenL4
+    V4_2_NginxConfigDeclaration__Location:
+      properties:
+        uri:
+          type: string
+          title: Uri
+        urimatch:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Urimatch
+          default: prefix
+        upstream:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Upstream
+          default: ''
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+        apigateway:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__APIGateway"
+          - type: 'null'
+          default: {}
+        caching:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Caching
+          default: ''
+        rate_limit:
+          anyOf:
+          - "$ref": "#/components/schemas/RateLimit"
+          - type: 'null'
+          default: {}
+        health_check:
+          anyOf:
+          - "$ref": "#/components/schemas/HealthCheck"
+          - type: 'null'
+          default: {}
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtect"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationAuth"
+          - type: 'null'
+          default: {}
+        headers:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationHeaders"
+          - type: 'null'
+          default: {}
+        njs:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/NjsHookLocation"
+            type: array
+          - type: 'null'
+          title: Njs
+          default: []
+      additionalProperties: false
+      type: object
+      required:
+      - uri
+      title: Location
+    V4_2_NginxConfigDeclaration__NmsCertificate:
+      properties:
+        type:
+          type: string
+          title: Type
+        name:
+          type: string
+          title: Name
+        contents:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      - name
+      title: NmsCertificate
+    V4_2_NginxConfigDeclaration__NmsPolicy:
+      properties:
+        type:
+          type: string
+          title: Type
+          default: ''
+        name:
+          type: string
+          title: Name
+          default: ''
+        active_tag:
+          type: string
+          title: Active Tag
+          default: ''
+        versions:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__NmsPolicyVersion"
+            type: array
+          - type: 'null'
+          title: Versions
+          default: []
+      additionalProperties: false
+      type: object
+      title: NmsPolicy
+    V4_2_NginxConfigDeclaration__NmsPolicyVersion:
+      properties:
+        tag:
+          type: string
+          title: Tag
+          default: ''
+        displayName:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Displayname
+          default: ''
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+          default: ''
+        contents:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: NmsPolicyVersion
+    V4_2_NginxConfigDeclaration__Output:
+      properties:
+        type:
+          type: string
+          title: Type
+        configmap:
+          anyOf:
+          - "$ref": "#/components/schemas/OutputConfigMap"
+          - type: 'null'
+          default: {}
+        http:
+          anyOf:
+          - "$ref": "#/components/schemas/OutputHttp"
+          - type: 'null'
+          default: {}
+        nms:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__OutputNMS"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - type
+      title: Output
+    V4_2_NginxConfigDeclaration__OutputNMS:
+      properties:
+        url:
+          type: string
+          title: Url
+          default: ''
+        username:
+          type: string
+          title: Username
+          default: ''
+        password:
+          type: string
+          title: Password
+          default: ''
+        instancegroup:
+          type: string
+          title: Instancegroup
+          default: ''
+        synctime:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Synctime
+          default: 0
+        modules:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Modules
+          default: []
+        certificates:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__NmsCertificate"
+            type: array
+          - type: 'null'
+          title: Certificates
+          default: []
+        policies:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__NmsPolicy"
+            type: array
+          - type: 'null'
+          title: Policies
+          default: []
+        log_profiles:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/LogProfile"
+            type: array
+          - type: 'null'
+          title: Log Profiles
+          default: []
+      additionalProperties: false
+      type: object
+      title: OutputNMS
+    V4_2_NginxConfigDeclaration__Server:
+      properties:
+        name:
+          type: string
+          title: Name
+        names:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Names
+          default: []
+        resolver:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Resolver
+          default: ''
+        listen:
+          anyOf:
+          - "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Listen"
+          - type: 'null'
+          default: {}
+        log:
+          anyOf:
+          - "$ref": "#/components/schemas/Log"
+          - type: 'null'
+          default: {}
+        locations:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/V4_2_NginxConfigDeclaration__Location"
+            type: array
+          - type: 'null'
+          title: Locations
+          default: []
+        app_protect:
+          anyOf:
+          - "$ref": "#/components/schemas/AppProtect"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+        headers:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationHeaders"
+          - type: 'null'
+          default: {}
+        njs:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/NjsHookHttpServer"
+            type: array
+          - type: 'null'
+          title: Njs
+          default: []
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: Server
+    V4_2_NginxConfigDeclaration__Tls:
+      properties:
+        certificate:
+          type: string
+          title: Certificate
+          default: ''
+        key:
+          type: string
+          title: Key
+          default: ''
+        trusted_ca_certificates:
+          type: string
+          title: Trusted Ca Certificates
+          default: ''
+        ciphers:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Ciphers
+          default: ''
+        protocols:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Protocols
+          default: []
+        ocsp:
+          anyOf:
+          - "$ref": "#/components/schemas/Ocsp"
+          - type: 'null'
+          default: {}
+        stapling:
+          anyOf:
+          - "$ref": "#/components/schemas/OcspStapling"
+          - type: 'null'
+          default: {}
+        authentication:
+          anyOf:
+          - "$ref": "#/components/schemas/LocationAuth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      title: Tls
+    V4_2_NginxConfigDeclaration__Upstream:
+      properties:
+        name:
+          type: string
+          title: Name
+        origin:
+          anyOf:
+          - items:
+              "$ref": "#/components/schemas/Origin"
+            type: array
+          - type: 'null'
+          title: Origin
+          default: []
+        sticky:
+          anyOf:
+          - "$ref": "#/components/schemas/Sticky"
+          - type: 'null'
+          default: {}
+        snippet:
+          anyOf:
+          - "$ref": "#/components/schemas/ObjectFromSourceOfTruth"
+          - type: 'null'
+          default: {}
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      title: Upstream
+    ValidItem:
+      properties:
+        codes:
+          anyOf:
+          - items:
+              type: integer
+            type: array
+          - type: 'null'
+          title: Codes
+          default:
+          - 200
+        ttl:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Ttl
+          default: 60
+      additionalProperties: false
+      type: object
+      title: ValidItem
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
