@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: spotify
-  description: The Spotify web API
+  name: Nginx API
+  description: The Nginx API
   tags:
-    - spotify
+    - nginx
     - rest
   annotations:
     # The annotation is deprecated, we use placeholders (see below) instead, remove it later.
