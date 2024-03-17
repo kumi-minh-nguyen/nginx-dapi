@@ -14,4 +14,4 @@ spec:
   lifecycle: production
   owner: guests
   definition:
-    $text: https://github.com/ducthanh1809/nginx-dapi/blob/main/openapi.yaml
+    $text: ./petstore.oas.yaml
