@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: Petstore-API
-  description: The Petstore API
+  name: Nginx-API
+  description: The Nginx API
   tags:
     - nginx
     - rest
